@@ -1,0 +1,162 @@
+{
+  "usuarios": [
+    {
+      "id": "1e2d6f8a-8f4b-4e5a-ae2b-67cfb1e8a29b",
+      "nome": "João Silva",
+      "username": "joao.silva",
+      "email": "joao.silva@example.com",
+      "role": "funcionario",
+      "createdAt": "2023-01-01T10:00:00Z",
+      "status": true
+    },
+    {
+      "id": "2a4d8c6e-5f3b-4e8d-b9fb-99d7c5e2e2b8",
+      "nome": "Maria Oliveira",
+      "username": "maria.oliveira",
+      "email": "maria.oliveira@example.com",
+      "role": "admin",
+      "createdAt": "2022-12-15T09:30:00Z",
+      "status": true
+    },
+    {
+      "id": "3c5e6f8b-4d7b-4e8f-9bfb-78d6e1c7a2d9",
+      "nome": "Pedro Almeida",
+      "username": "pedro.almeida",
+      "email": "pedro.almeida@example.com",
+      "role": "funcionario",
+      "createdAt": "2022-11-20T12:45:00Z",
+      "status": false
+    },
+    {
+      "id": "4d7e8f9c-6b8c-4a9e-8f7d-56d4e7f8c3b1",
+      "nome": "Luciana Mendes",
+      "username": "luciana.mendes",
+      "email": "luciana.mendes@example.com",
+      "role": "admin",
+      "createdAt": "2023-03-10T08:50:00Z",
+      "status": true
+    }
+  ],
+  "socios": [
+    {
+      "id": "5e8f7d6c-2e3b-4a9d-8f7e-67c5e4b3a1d0",
+      "nome": "Carlos Pereira",
+      "email": "carlos.pereira@example.com",
+      "ref": "ABC123",
+      "tempoDeSocio": 12,
+      "createdAt": "2021-06-10T14:20:00Z",
+      "ultimaVisita": "2023-06-01T16:45:00Z"
+    },
+    {
+      "id": "6f9d8e7b-3c4b-4e9f-8f7d-45d6e7c8b4a2",
+      "nome": "Ana Souza",
+      "email": "ana.souza@example.com",
+      "ref": "XYZ456",
+      "tempoDeSocio": 24,
+      "createdAt": "2020-05-22T11:10:00Z",
+      "ultimaVisita": "2023-05-30T15:30:00Z"
+    },
+    {
+      "id": "7a8d9f6e-1b3c-4a7f-8d9e-23c5d7b9a3c4",
+      "nome": "Mariana Lima",
+      "email": "mariana.lima@example.com",
+      "ref": "LMN789",
+      "tempoDeSocio": 36,
+      "createdAt": "2019-04-15T09:00:00Z",
+      "ultimaVisita": "2023-06-05T10:20:00Z"
+    },
+    {
+      "id": "8b9e7d5c-0c1d-4b6a-9e8f-12d4e7f6a5d1",
+      "nome": "Ricardo Santos",
+      "email": "ricardo.santos@example.com",
+      "ref": "OPQ321",
+      "tempoDeSocio": 18,
+      "createdAt": "2020-10-05T13:45:00Z",
+      "ultimaVisita": "2023-06-03T12:00:00Z"
+    }
+  ],
+  "endpoints": {
+    "usuarios": {
+      "getAll": {
+        "method": "GET",
+        "url": "/api/usuarios",
+        "description": "Obtém todos os usuários"
+      },
+      "getById": {
+        "method": "GET",
+        "url": "/api/usuarios/:id",
+        "description": "Obtém um usuário pelo ID"
+      },
+      "create": {
+        "method": "POST",
+        "url": "/api/usuarios",
+        "description": "Cria um novo usuário",
+        "body": {
+          "nome": "string",
+          "username": "string",
+          "email": "string",
+          "role": "string",
+          "status": "boolean"
+        }
+      },
+      "update": {
+        "method": "PUT",
+        "url": "/api/usuarios/:id",
+        "description": "Atualiza um usuário pelo ID",
+        "body": {
+          "nome": "string",
+          "username": "string",
+          "email": "string",
+          "role": "string",
+          "status": "boolean"
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "url": "/api/usuarios/:id",
+        "description": "Exclui um usuário pelo ID"
+      }
+    },
+    "socios": {
+      "getAll": {
+        "method": "GET",
+        "url": "/api/socios",
+        "description": "Obtém todos os sócios"
+      },
+      "getById": {
+        "method": "GET",
+        "url": "/api/socios/:id",
+        "description": "Obtém um sócio pelo ID"
+      },
+      "create": {
+        "method": "POST",
+        "url": "/api/socios",
+        "description": "Cria um novo sócio",
+        "body": {
+          "nome": "string",
+          "email": "string",
+          "ref": "string",
+          "tempoDeSocio": "number",
+          "ultimaVisita": "string"
+        }
+      },
+      "update": {
+        "method": "PUT",
+        "url": "/api/socios/:id",
+        "description": "Atualiza um sócio pelo ID",
+        "body": {
+          "nome": "string",
+          "email": "string",
+          "ref": "string",
+          "tempoDeSocio": "number",
+          "ultimaVisita": "string"
+        }
+      },
+      "delete": {
+        "method": "DELETE",
+        "url": "/api/socios/:id",
+        "description": "Exclui um sócio pelo ID"
+      }
+    }
+  }
+}
